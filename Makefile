@@ -30,16 +30,11 @@ start-bundler:
 	yarn start --reset-cache
 
 start-ios:
-	npx react-native run-ios
+	yarn ios
 
 adb-remove-app:
 	adb -s emulator-5554 uninstall "com.androidcrashexample"
 
 start-android:
 	make adb-remove-app || true
-	arch -x86_64 npx react-native run-android
-	adb reverse tcp:3000 tcp:3000
-	adb reverse tcp:9000 tcp:9000
-
-build-js:
-	arch -x86_64 npx react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'
+	yarn android
