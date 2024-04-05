@@ -8,13 +8,13 @@ This is a reproduction of keyboard [**Reanimated**](https://github.com/software-
 make setup
 ```
 
-## Step21: Start the Metro Server
+## Step 2: Start the Metro Server
 
 ```bash
 make start-bundler
 ```
 
-## Step 3: Start App on the Android emulator
+## Step 3: Start the app on the Android emulator
 
 ```bash
 make start-android
